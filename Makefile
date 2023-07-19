@@ -1,11 +1,11 @@
-hello: HelloWorld.cpp
-	cd GNU-Build/
-	g++ -o hello HelloWorld.cpp
+hello:
+	g++ -o hello HelloWorld/HelloWorld.cpp
 install:
 	bash downloadgithub.sh
+	chmod -R a+w HelloWorld
 unistall:
-	chmod -R a+w GNU-Build
-	rm -rf GNU-Build
+	chmod -R a+w HelloWorld
+	rm -rf HelloWorld
 	rm -rf hello
 service-GNU-Build:
 	bash install-service.sh
