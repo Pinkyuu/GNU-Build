@@ -1,2 +1,5 @@
 #!/bin/bash
-echo "My service is running"
+while true; do
+	echo "My service is running"
+	sleep 1
+done
