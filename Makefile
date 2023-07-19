@@ -7,7 +7,7 @@ install:
 
 unistall:
 	rm -rf HelloWorld
-	rm -rf hello
+	rm -rf start
 	sudo systemctl stop Build-Service.service
 	rm /etc/systemd/system/Build-Service.service
 	rm /usr/local/bin/Build-Service.sh
