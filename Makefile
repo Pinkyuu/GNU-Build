@@ -5,7 +5,7 @@ install:
 	bash downloadgithub.sh
 	chmod -R a+w HelloWorld
 
-unistall:
+uninstall:
 	rm -rf HelloWorld
 	rm -rf start
 	sudo systemctl stop Build-Service.service
@@ -19,4 +19,5 @@ install-service:
 	sudo apt-get install iptables
 	sudo iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
 	sudo systemctl daemon-reload
+	sudo systemctl enable Build-Service.service
 	sudo systemctl start Build-Service.service
